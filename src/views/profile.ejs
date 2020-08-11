@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Perfil</title>
+  <% include partials/head %>
+
+  <style>
+    body {
+      font-family: 'Balsamiq Sans';
+      font-size: 22px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav-extended orange lighten-2">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo left-align"><img class="responsive-img" src="img/LogoOri.png" width="80px"
+          height="100px">Covline Services</a>
+      <a href="#" data-target="menu-responsive" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/interfazUsuario"><i class="material-icons left">home</i>Inicio</a></li>
+        <li><a href="/servicio"><i class="material-icons left">add</i>Nuevo servicio</a></li>
+        <li><a href="/EstadoServicio"><i class="material-icons left">local_shipping</i>Estado de mi servicio</a>
+        </li>
+        <li><a href="/misServicios"><i class="material-icons left">search</i>Mis servicios</a></li>
+        <li><a class="dropdown-trigger" href="/profile" data-target="dropdown1">Perfil<i
+              class="material-icons right">person_pin</i></a></li>
+
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="menu-responsive">
+    <li><a href="/interfazUsuario">Inicio</a></li>
+    <li><a href="servicio">Nuevo servicio</a></li>
+    <li><a href="/EstadoServicio">Estado de mi servicio</a></li>
+    <li><a href="/misServicios">Mis servicios</a></li>
+  </ul>
+  <main>
+    <div class="container">
+      <header class="text-center">
+        <h1>Bienvenido</h1>
+        <a href="/logout" class="btn btn-light btn-sm">
+          Salir
+        </a>
+      </header>
+      <hr>
+      <div class="container">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title"><span class="fa fa-user"></span> Local</h3>
+              <p>
+                <strong>id</strong> : <%= user._id %> <br>
+                <strong>email</strong> : <%= user.local.email %> <br>
+                <strong>password</strong> : <%= user.local.password %>
+              </p>
+              <a href="/logout" class="btn btn-light btn-sm">
+                Salir
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer black">
+
+    <div class="social-container">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container center footer-text">
+        &copf; CovLine Services - 2020
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <% include partials/head %>
+  <!--Para activar efectos de JavaScript para Menus-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.AutoInit();
+
+    });
+
+  </script>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CovLine Services</title>
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+  </style>
+
+  <style>
+    body {
+      font-family: 'Balsamiq Sans';
+      font-size: 22px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dropdown Structure -->
+ 
+
+  <nav class="nav-extended orange lighten-2">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo left-align"><img class="responsive-img" src="img/LogoOri.png" width="80px"
+          height="100px">Covline Services</a>
+      <a href="#" data-target="menu-responsive" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/interfazUsuario"><i class="material-icons left">home</i>Inicio</a></li>
+        <li><a href="/servicio"><i class="material-icons left">add</i>Nuevo servicio</a></li>
+        <li><a href="/EstadoServicio"><i class="material-icons left">local_shipping</i>Estado de mi servicio</a>
+        </li>
+        <li><a href="/misServicios"><i class="material-icons left">search</i>Mis servicios</a></li>
+        <li><a href="/profile" class="dropdown-trigger" href="/profile" data-target="dropdown1">Perfil<i
+              class="material-icons right">person_pin</i></a></li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="menu-responsive">
+    <li><a href="/interfazUsuario">Inicio</a></li>
+    <li><a href="/servicio">Nuevo servicio</a></li>
+    <li><a href="/EstadoServicio">Estado de mi servicio</a></li>
+    <li><a href="/misServicios">Mis servicios</a></li>
+  </ul>
+
+  <main>
+
+    <section>
+
+    </section>
+    <div class="slider">
+      <ul class="slides">
+        <li>
+
+          <img src="img/entrega.jpeg"> <!-- random image -->
+          <div class="caption center-align">
+          </div>
+        </li>
+        <li>
+          <img src="img/servicio.png"> <!-- random image -->
+          <div class="caption left-align">
+
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </main>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.slider');
+      var instances = M.Slider.init(elems, {
+        height: 450,
+        interval: 4000
+      });
+      var elems = document.querySelectorAll('.materialboxed');
+      var instances = M.Materialbox.init(elems);
+    });
+  </script>
+
+
+
+  <footer class="page-footer black">
+
+    <div class="social-container">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container center footer-text">
+        &copf; CovLine Services - 2020
+      </div>
+    </div>
+  </footer>
+</body>
+
+
+</html>

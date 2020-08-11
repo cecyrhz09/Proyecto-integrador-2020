@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- AMIGA AQUÍ CAMBIAS EL ENCABEZADO Y EL ÍCONO DE LA PÁGINA -->
+    <title>CovLine Services</title>
+    <% include partials/head %>
+    <link rel="icon" href="img/LogoOri">
+    <!--Íconos de Google Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!--Fuente de datos del FrameWork-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Inicializador de archivos JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/JavaScript">
+      $(document).ready(fuction(){
+        $('select').formSelect();
+      });
+    </script>
+    <style>
+        body {
+            font-family: 'Balsamiq Sans';
+            font-size: 22px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="nav-extended orange lighten-2">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left-align"><img class="responsive-img" src="img/LogoOri.png" width="80px"
+                    height="100px">Covline Services</a>
+            <a href="#" data-target="menu-responsive" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/interfazUsuario"><i class="material-icons left">home</i>Inicio</a></li>
+                <li><a href="/servicio"><i class="material-icons left">add</i>Nuevo servicio</a></li>
+                <li><a href="/EstadoServicio"><i class="material-icons left">local_shipping</i>Estado de mi servicio</a>
+                </li>
+                <li><a href="/misServicios"><i class="material-icons left">search</i>Mis servicios</a></li>
+                <li><a class="dropdown-trigger" href="/profile" data-target="dropdown1">Perfil<i
+                            class="material-icons right">person_pin</i></a></li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="menu-responsive">
+        <li><a href="/interfazUsuario">Inicio</a></li>
+        <li><a href="/servicio">Nuevo servicio</a></li>
+        <li><a href="/EstadoServicio">Estado de mi servicio</a></li>
+        <li><a href="/misServicios">Mis servicios</a></li>
+    </ul>
+
+    <main>
+        <!--FORMULARIO DE SERVICIO NUEVO-->
+        <div class="section container white">
+            <div class="row card">
+                <form action="">
+                    <div class="row ">
+                        <h3 style="text-align: center;">Registra aquí tu servicio</h3>
+                    </div>
+                    <div class="row ">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <label for="cliente">Cliente</label>
+                            <input type="text" id="cliente">
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">call</i>
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" id="telefono">
+                        </div>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">add_location</i>
+                        <label for="negocio">Negocio</label>
+                        <input type="text" id="negocio">
+                    </div>
+                    <!-- <div class="clearfix"></div> -->
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">location_on</i>
+                        <select>
+                            <option value="" disabled selected>Seleccione su destino</option>
+                            <option value="">Allende #34</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">local_mall</i>
+                        <label for="especificacion">Especifique su pedido</label>
+                        <input type="text" id="especificacion">
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">access_alarm</i>
+                        <label for="hora">Hora de pedido</label>
+                        <input type="text" id="pago">
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">monetization_on</i>
+                        <label for="pago">Monto a pagar</label>
+                        <input type="text" id="pago">
+                    </div>
+                    <div class="input-field col s3">
+                        <button class="btn red">
+                            <i class="material-icons left">delete</i>
+                            Cancelar
+                        </button>
+                    </div>
+                    <div class="input-field col s4 right">
+                        <button class="btn">
+                            <i class="material-icons left">check_circle</i>
+                            Realizar Compra
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer black">
+
+        <div class="social-container">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container center footer-text">
+                &copf; CovLine Services - 2020
+            </div>
+        </div>
+    </footer>
+
+    <!--Fuente de datos de JavaScript del FrameWork-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+</body>
+
+</html>

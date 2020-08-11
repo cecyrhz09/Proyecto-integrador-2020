@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-table@1.16.0/dist/themes/materialize/bootstrap-table-materialize.min.css">
+
+    <!--Para activar efectos de JavaScript para Menus-->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+        });
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CovLine Services</title>
+    <% include partials/head %>
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Balsamiq Sans';font-size: 22px;
+        }
+        </style>
+</head>
+
+<body>
+
+    <!-- Navegation Menu -->
+    <ul id="dropdown1" class="dropdown-content">
+
+        <li><a href="#"><i class="material-icons">settings</i>Editar</a></li>
+        <li><a href="#"><i class="material-icons">exit_to_app</i>Salir</a></li>
+
+    </ul>
+
+
+    <nav class="nav-extended orange lighten-2">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left-align"><img class="responsive-img" src="img/LogoOri.png" width="80px"
+                    height="100px">Covline Services</a>
+            <a href="#" data-target="menu-responsive" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/interfazUsuario"><i class="material-icons left">home</i>Inicio</a></li>
+                <li><a href="/servicio"><i class="material-icons left">add</i>Nuevo servicio</a></li>
+                <li><a href="/EstadoServicio"><i class="material-icons left">local_shipping</i>Estado de mi servicio</a>
+                </li>
+                <li><a href="/misServicios"><i class="material-icons left">search</i>Mis servicios</a></li>
+                <li><a class="dropdown-trigger" href="/profile" data-target="dropdown1">Perfil<i
+                            class="material-icons right">person_pin</i></a></li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="menu-responsive">
+        <li><a href="/interfazUsuario">Inicio</a></li>
+        <li><a href="/servicio">Nuevo servicio</a></li>
+        <li><a href="/EstadoServicio">Estado de mi servicio</a></li>
+        <li><a href="/misServicios">Mis servicios</a></li>
+    </ul>
+
+
+
+
+    <main>
+        <!-- Galeria de imagenes en forma de carrusel-->
+        <div id="servicio" class="container section center">
+            <div class="centered">
+                <div class="col s10">
+                    <div class="section scrollspy" id="primero">
+                        <h2> <img src="img/LogoOri.png" height="100" width="200" alt="Logo"> </h2>
+                        <h2>En proceso</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Teléfono</th>
+                                <th>Domicilio</th>
+                                <th>Negocio</th>
+                                <th>Pedido</th>
+                                <th>Hora</th>
+                                <th>Monto</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Cristóbal Méndez Martínez</td>
+                                <td>419468452</td>
+                                <td>Dolores Hidalgo, Calle Meteoros #12</td>
+                                <td>Coppel</td>
+                                <td>Bolsa sellada por Coppel, contiene una blusa color blanca, talla M.</td>
+                                <td>11:25</td>
+                                <td>$265.50</td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                    <ul class="pagination">
+                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                        <li class="waves-effect"><a href="/EstadoServicio">1</a></li>
+                        <li class="active"><a href="/proceso">2</a></li>
+                        <li class="waves-effect"><a href="/concluido">3</a></li>
+                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                    </ul>
+
+    </main>
+
+
+
+    <footer class="page-footer black">
+
+        <div class="social-container">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container center footer-text">
+                &copf; CovLine Services - 2020
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

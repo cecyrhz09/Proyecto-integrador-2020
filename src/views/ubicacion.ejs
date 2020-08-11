@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>CovLine Services</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="shortcut icon" href="img/LogoOri.png" type="image/x-icon">
+
+    <link href='https://fonts.googleapis.com/css?family=Balsamiq Sans' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Balsamiq Sans';
+            font-size: 22px;
+        }
+
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function iniciarMap() {
+            var coord = { lat: 21.4658313, lng: -101.2183787 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: coord
+            });
+            var marker = new google.maps.Marker({
+                position: coord,
+                map: map
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Navegation Menu 
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="#!">Editar<i class="material-icons right">settings</i></a></l< /a>
+    </li>
+    <li><a href="#!">Salir<i class="material-icons right">exit_to_app</i></a></li>
+  </ul>-->
+
+
+    <nav class="nav-extended orange lighten-2">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left-align"><img class="responsive-img" src="img/LogoOri.png" width="80px"
+                    height="100px">Covline Services</a>
+            <a href="#" data-target="menu-responsive" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/"><i class="material-icons left">home</i>Inicio</a></li>
+                <li><a href=conoce><i class="material-icons left">mood</i>Conócenos</a></li>
+                <li><a href=""><i class="material-icons left">schedule</i>Horarios</a></li>
+                <li><a href=""><i class="material-icons left">shopping_cart</i>Servicios</a></li>
+                <li><a href=""><i class="material-icons left">location_on</i>Ubicación</a></li>
+                <li><a href="/login" class="btn black white-text waves-effect waves-blue-grey lighten-1">Iniciar sesión</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="menu-responsive">
+        <li><a href="/">Inicio</a></li>
+        <li><a href=#>Conócenos</a></li>
+        <li><a href="">Horarios</a></li>
+        <li><a href="">Servicios</a></li>
+    </ul>
+
+    <main>
+        <h3 align="center">Encuentrános aquí</h3>
+        <p align="center" style="font-size:15pt;">Visítanos en calle Rivera 102, col centro. O llamános al teléfono
+            4281052606</p>
+        <div id="map" class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+
+                        <span class="card-title"></span>
+                        <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons"></i></a>-->
+                    </div>
+                    <div class="card-content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <footer class="page-footer black">
+
+        <div class="social-container">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container center footer-text">
+                &copf; CovLine Services - 2020
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://kit.fontawesome.com/35db202371.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?
+  key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+
+</body>
+
+</html>
